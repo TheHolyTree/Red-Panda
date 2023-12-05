@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Red pand</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div id="logo" >
+            <span onclick="redirectIt(this)" href="main.html" title="Red panda">Red panda</span>
+        </div>
+        <div id="menu">
+            <a href="facts.html" title="Факты">Факты</a>
+            <a href="nutrition.html" title="Питание">Питание</a>
+            <a href="conditions.html" title="Условия жизни">Условия жизни</a>
+            <a href="cute.html" title="Милота">Милота</a>
+          </div>
+    </header>
+
+    <div id="sky">
+        <a> Условия жихни красных панд</a>
+    </div>
+
+    <div id="info">
+      <div class="img">
+        <img src="conditions/1.jpg" alt="" width="300" height="300">
+        <span>Малая панда, как многие животные, выходит на охоту по ночам. Тогда же питается бамбуком, личинками, корнями растений. В сумерках глаза «огненной лисы» видят хорошо. Это позволяет ей с легкостью передвигаться по веткам и находить укрытие от хищников — медведей и куниц.</span>
+      </div>
+      <div class="img">
+        <img src="conditions/2.jpg" alt="" width="200" height="300">
+        <span>Ночной образ жизни характерная черта айлуров. Днем животное спит. В теплое время года панда любит располагаться на ветках. Когда холодно — ищет укрытие потеплее: в дупле дерева. Обустраивает себе гнездо из веток и листьев.</span>
+      </div>
+      <div class="img">
+        <img src="conditions/3.jpg" alt="" width="300" height="300">
+        <span>Характер малой панды не агрессивный. Благодаря этому она находит общий язык с обитателями леса. Проживают парами или семействами. Самец не принимает участия в воспитании детенышей, поэтому основной груз обеспечения пищей «деток» лежит на плечах матери.</span>
+      </div>
+      <div class="img">
+        <img src="conditions/4.jpg" alt="" width="200" height="300">
+        <span>Излюбленная местность, где красная панда обитает, горная возвышенность Гималаев, на высоте 2000—4000 метров над уровнем моря. «Огненная лисица» проживает там же, где большая панда. Для хорошего питания и укрытия животным требуется обилие растительности.</span>
+      </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script>
+    function slowScroll(id) {
+      $('html, body').animate({
+        scrollTop: $(id).offset().top
+      }, 100);
+    }
+
+    $(document).on("scroll", function () {
+      if($(window).scrollTop() === 0)
+        $("header").removeClass("fixed");
+      else
+        $("header").attr("class", "fixed");
+    });
+
+    function redirectIt(obj){
+      var goToLink = obj.getAttribute("href");
+      window.location.href=goToLink;
+  }
+  </script>
+</body>
+</html>
